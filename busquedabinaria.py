@@ -10,7 +10,14 @@ def busBin(lista):
     while True:
         op += 1
         mid = (hig+low)//2
-        if buscar < lista[mid]:
+        if mid + 1 == hig:
+            if buscar == lista[hig]:
+                print(f"Encontrado op={op}")
+                break
+            else:
+                print(f"NO Encontrado op={op}")
+                break
+        elif buscar < lista[mid]:
             hig = mid
         elif buscar > lista[mid]:
             low = mid
