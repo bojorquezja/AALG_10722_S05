@@ -7,14 +7,15 @@
 def buslinGerson():
     buscar = int(input("Ingrese el número: "))
     encontrado = False
-
+    op = 0
     for i in range(len(numeros)):
+        op += 1
         if numeros[i] == buscar:
-            print(f"El número {buscar} fue encontrado.")
+            print(f"El número {buscar} fue encontrado. op={op}")
             encontrado = True
             break
     if not encontrado:
-        print(f"El número {buscar} NO fue encontrado.")
+        print(f"El número {buscar} NO fue encontrado. op={op}")
   
 def buslinLuis():
     n = int (input("Ingresa un número para buscar: "))
@@ -23,5 +24,5 @@ def buslinLuis():
     else:
         print("El numero no esta en la lista :<")
 
-numeros = [6, 5, 2, 8, 9]  
-buslinLuis()
+numeros = [2,5,6,8,9,11,12,13,15,18,20,25,26,28,30]
+buslinGerson()
